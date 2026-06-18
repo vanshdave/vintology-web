@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Château Lafite Rothschild 1982 | Vintology</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <div class="logo">Vintology</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#" class="active">Shop All</a>
+            <a href="#">Auctions</a>
+            <a href="index.html#events">Events</a>
+            <a href="#">About</a>
+        </nav>
+        <div class="header-actions">
+            <a href="auth.html" class="account-link">My Account</a>
+            <div class="cart-icon" style="cursor: pointer;" onclick="window.location.href='cart.html'">
+                🛒 <span class="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Narrative Product Layout -->
+    <main class="product-narrative-container">
+        <!-- Left Column: High-Res Fine Art Presentation -->
+         <div class="product-visual-pane">
+    <div class="showcase-frame">
+        <span class="bottle-monograph">🍾</span>
+    </div>
+</div>
+
+        <!-- Right Column: Investment Profile & History -->
+        <div class="product-data-pane">
+            <span class="provenance-tag">Verified Provenance</span>
+            <h1 class="wine-title">Château Lafite Rothschild</h1>
+            <h2 class="wine-vintage">Vintage 1982</h2>
+            <p class="wine-region">Pauillac, Bordeaux, France</p>
+
+            <div class="investment-metrics">
+                <div class="metric">
+                    <span class="metric-label">Robert Parker Score</span>
+                    <span class="metric-value">100 / 100</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">Fill Level</span>
+                    <span class="metric-value">Into Neck</span>
+                </div>
+            </div>
+
+            <p class="narrative-text">
+                Widely regarded as a modern legend of the Bordeaux region, the 1982 Lafite Rothschild is an extraordinary monument of viticulture. This legendary vintage exhibits an intense, opaque crimson-purple color, followed by an unforgettable bouquet of black currants, cedar, and crushed stones. Perfectly stored in an underground, temperature-regulated vault.
+            </p>
+
+            <div class="purchase-block">
+                <div class="price-display">$4,200 <span class="currency-tag">USD</span></div>
+                <button class="btn btn-primary acquire-btn" onclick="addToCartAndAlert()">ACQUIRE ASSET</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div>VINTOLOGY LTD. | LONDON | NYC | TOKYO</div>
+        <div>GLOBAL SHIPPING | SECURE CHECKOUT</div>
+    </footer>
+
+    <script>
+        function addToCartAndAlert() {
+            alert("🔒 Secure Checkout Locked: Château Lafite Rothschild 1982 added to your portfolio container.");
+            const cartCount = document.querySelector(".cart-count");
+            if(cartCount) cartCount.innerText = "1";
+        }
+    </script>
+</body>
+</html>

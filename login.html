@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collector Portal | Vintology</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Premium Google Fonts Integration -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Balanced Global Axis Navigation Header -->
+    <header class="main-header">
+        <a href="index.html" class="logo-container">
+            <div class="brand-logo-icon"></div>
+            <span class="brand-title">Vintology</span>
+        </a>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop All</a>
+            <a href="events.html">Events</a>
+        </nav>
+        <div class="header-actions">
+            <a href="login.html" class="account-link active">My Account</a>
+            <div class="cart-icon">
+                <span>🛒</span>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Centered Glassmorphic Authentication Screen -->
+    <main class="hero-section" style="min-height: calc(100vh - 130px); padding: 40px 20px;">
+        <div class="login-wrapper">
+            <div class="provenance-tag">✦ Secure Access Portal</div>
+            <h2 class="login-title">COLLECTOR SIGN IN</h2>
+            <p class="login-subtitle">Access your underground asset vault holdings and private allocation allocations.</p>
+            
+            <form class="login-form" onsubmit="handlePortalAuth(event)">
+                <div class="input-group">
+                    <input type="email" id="authEmail" required placeholder=" ">
+                    <label for="authEmail">PORTAL EMAIL KEY</label>
+                </div>
+                
+                <div class="input-group">
+                    <input type="password" id="authPassword" required placeholder=" ">
+                    <label for="authPassword">SECURE ACCESS PHRASE</label>
+                </div>
+
+                <div class="auth-options">
+                    <label class="remember-me">
+                        <input type="checkbox"> <span>Remember Key</span>
+                    </label>
+                    <a href="#" class="forgot-link">Request Key Recovery</a>
+                </div>
+
+                <button type="submit" class="btn btn-primary login-submit-btn">AUTHENTICATE ACCESS</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Slide-Out Luxury Cart Drawer Component -->
+    <div id="cartDrawer" class="cart-drawer">
+        <div class="drawer-header">
+            <h3>YOUR SELECTION</h3>
+            <button class="close-drawer-btn" onclick="toggleCartDrawer()">✕</button>
+        </div>
+        <div id="cartItemsContainer" class="drawer-content">
+            <div class="empty-cart-message">The acquisition vault is currently vacant.</div>
+        </div>
+        <div class="drawer-footer">
+            <div class="summary-row">
+                <span>TOTAL VALUE</span>
+                <span id="cartTotalDisplay">$0.00</span>
+            </div>
+            <button class="btn btn-primary checkout-btn" onclick="secureCheckout()">PROCEED TO ACQUISITION</button>
+        </div>
+    </div>
+    <div id="drawerOverlay" class="drawer-overlay" onclick="toggleCartDrawer()"></div>
+
+    <!-- Global Cohesive Footer -->
+    <footer class="main-footer">
+        <div>© VINTOLOGY LTD. | FINE WINE ASSET MANAGEMENT</div>
+    </footer>
+
+    <!-- Connected Interface Logic Engines -->
+    <script src="js/cart-system.js"></script>
+    <script>
+        function handlePortalAuth(event) {
+            event.preventDefault();
+            alert("🔒 Encrypted authentication token submitted to clearing server...");
+        }
+    </script>
+</body>
+</html>

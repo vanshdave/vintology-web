@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintology | Fine Wine Asset Management</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Premium Google Fonts Integration -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Balanced Global Axis Navigation Header -->
+    <header class="main-header">
+        <a href="index.html" class="logo-container">
+            <div class="brand-logo-icon"></div>
+            <span class="brand-title">Vintology</span>
+        </a>
+        <nav class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="shop.html">Shop All</a>
+            <a href="events.html">Events</a>
+        </nav>
+        <div class="header-actions">
+            <a href="#" class="account-link">My Account</a>
+            <div class="cart-icon">
+                <span>🛒</span>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cinematic Hero Intro Section -->
+    <section class="hero-section" style="min-height: 85vh;">
+        <div class="hero-content">
+            <p>Investment Grade Viticulture</p>
+            <h1 class="hero-brand-title">THE VAULT</h1>
+            <h2>Secure Alternative Asset Accumulation</h2>
+            <div class="hero-buttons">
+                <a href="shop.html" class="btn btn-primary">Explore Inventory</a>
+                <a href="events.html" class="btn btn-secondary">Private Tastings</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Editorial Brand Statement Highlights -->
+    <section class="featured-section" style="background-color: var(--bg-charcoal); border-top: 1px solid var(--border-subtle);">
+        <h3 class="section-title">Why Vintology</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto;">
+            
+            <div style="padding: 20px; border-left: 1px solid var(--accent-gold);">
+                <h4 style="font-family: var(--font-serif); font-size: 16px; margin-bottom: 10px; letter-spacing: 1px;">01 / ESCROW STORAGE</h4>
+                <p style="color: var(--text-muted); font-size: 13px; line-height: 1.6; font-weight: 300;">Every asset is preserved in underground, temperature and humidity-stabilized historic stone vaults.</p>
+            </div>
+
+            <div style="padding: 20px; border-left: 1px solid var(--accent-gold);">
+                <h4 style="font-family: var(--font-serif); font-size: 16px; margin-bottom: 10px; letter-spacing: 1px;">02 / PROVENANCE TRACKED</h4>
+                <p style="color: var(--text-muted); font-size: 13px; line-height: 1.6; font-weight: 300;">100% verified asset history from creation to allocation, guaranteeing complete collection authenticity.</p>
+            </div>
+
+            <div style="padding: 20px; border-left: 1px solid var(--accent-gold);">
+                <h4 style="font-family: var(--font-serif); font-size: 16px; margin-bottom: 10px; letter-spacing: 1px;">03 / LIQUID CURATIONS</h4>
+                <p style="color: var(--text-muted); font-size: 13px; line-height: 1.6; font-weight: 300;">Access premium global masterclasses and allocations tailored directly to modern portfolios.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Slide-Out Luxury Cart Drawer Component -->
+    <div id="cartDrawer" class="cart-drawer">
+        <div class="drawer-header">
+            <h3>YOUR SELECTION</h3>
+            <button class="close-drawer-btn" onclick="toggleCartDrawer()">✕</button>
+        </div>
+        <div id="cartItemsContainer" class="drawer-content">
+            <div class="empty-cart-message">The acquisition vault is currently vacant.</div>
+        </div>
+        <div class="drawer-footer">
+            <div class="summary-row">
+                <span>TOTAL VALUE</span>
+                <span id="cartTotalDisplay">$0.00</span>
+            </div>
+            <button class="btn btn-primary checkout-btn" onclick="secureCheckout()">PROCEED TO ACQUISITION</button>
+        </div>
+    </div>
+    <div id="drawerOverlay" class="drawer-overlay" onclick="toggleCartDrawer()"></div>
+
+    <!-- Global Cohesive Footer -->
+    <footer class="main-footer">
+        <div>© VINTOLOGY PVT LTD. | FINE WINE ASSET MANAGEMENT</div>
+    </footer>
+
+    <!-- Connect Interactive Cart System Logic -->
+    <script src="js/cart-system.js"></script>
+</body>
+</html>

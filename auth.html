@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collector Authentication | Vintology</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        .auth-container {
+            max-width: 900px;
+            margin: 80px auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            padding: 20px;
+        }
+        .auth-box {
+            background-color: var(--bg-charcoal);
+            border: 1px solid #262626;
+            padding: 40px;
+        }
+        .auth-box h3 {
+            font-family: var(--font-serif);
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 11px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--bg-obsidian);
+            border: 1px solid #333;
+            color: white;
+            font-family: var(--font-sans);
+        }
+        .form-group input:focus {
+            border-color: var(--accent-gold);
+            outline: none;
+        }
+        .auth-btn { width: 100%; margin: 10px 0 0 0; }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">Vintology</div>
+        <nav class="nav-links"><a href="index.html">Back to Vault</a></nav>
+    </header>
+
+    <main class="auth-container">
+        <div class="auth-box">
+            <h3>LOG IN</h3>
+            <form onsubmit="alert('Welcome back, Collector.'); return false;">
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" required placeholder="collector@vintology.com">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" required placeholder="••••••••">
+                </div>
+                <button type="submit" class="btn btn-primary auth-btn">ACCESS ACCOUNT</button>
+            </form>
+        </div>
+
+        <div class="auth-box" style="border-left: 1px solid #262626;">
+            <h3>REGISTER</h3>
+            <form onsubmit="alert('Membership requested. Verification email sent.'); return false;">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" required placeholder="Alexander Morgan">
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" required placeholder="alex@vintageinvestor.com">
+                </div>
+                <div class="form-group">
+                    <label>Create Password</label>
+                    <input type="password" required placeholder="Minimum 8 characters">
+                </div>
+                <button type="submit" class="btn btn-secondary auth-btn">REQUEST MEMBERSHIP</button>
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>

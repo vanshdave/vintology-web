@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Asset Portfolio | Vintology</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        .cart-container { max-width: 1000px; margin: 60px auto; padding: 20px; }
+        .cart-title { font-family: var(--font-serif); letter-spacing: 3px; margin-bottom: 40px; }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            background-color: var(--bg-charcoal);
+            border: 1px solid #262626;
+            padding: 20px;
+            margin-bottom: 20px;
+            justify-content: space-between;
+        }
+        .cart-item img { width: 80px; height: 80px; object-fit: contain; background: #121212; border: 1px solid #262626; }
+        .item-details { flex-grow: 1; padding: 0 30px; }
+        .item-details h4 { font-family: var(--font-serif); font-size: 18px; }
+        .item-details p { color: var(--text-muted); font-size: 12px; }
+        .cart-summary {
+            text-align: right;
+            border-top: 1px solid #262626;
+            padding-top: 30px;
+            margin-top: 40px;
+        }
+        .total-price { font-family: var(--font-serif); font-size: 24px; color: var(--accent-gold); margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">Vintology</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="cart.html" class="active">Portfolio (<span class="cart-count">1</span>)</a>
+        </nav>
+    </header>
+
+    <main class="cart-container">
+        <h2 class="cart-title">YOUR ACQUISITION PORTFOLIO</h2>
+        
+        <div class="cart-item">
+            <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=600&auto=format&fit=crop" alt="Wine Asset">
+            <div class="item-details">
+                <h4>Château Lafite Rothschild</h4>
+                <p>Vintage: 1982 | Condition: Pristine (Into Neck)</p>
+            </div>
+            <div class="item-price" style="font-family: var(--font-serif); color: var(--accent-gold);">$9,900 USD</div>
+        </div>
+
+        <div class="cart-summary">
+            <div class="total-price">Total Valuation: $9,900 USD</div>
+            <button class="btn btn-primary" onclick="alert('Proceeding to international shipping terminal...')">PROCEED TO SECURE CHECKOUT</button>
+        </div>
+    </main>
+
+</body>
+</html>
