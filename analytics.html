@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintology | Asset Analytics</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="analytics-body">
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">VINTOLOGY</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Vault Home</a></li>
+                <li><a href="shop.html">The Marketplace</a></li>
+                <li><a href="analytics.html" class="active">Asset Analytics</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="dashboard-container">
+        
+        <section class="dashboard-header">
+            <h1>Sovereign Asset Valuation Dashboard</h1>
+            <p>Track real-time investment appreciation curves, rarity distributions, and market telemetry.</p>
+        </section>
+
+        <section class="control-panel">
+            <label for="wine-selector">Select Rare Asset Allocation:</label>
+            <select id="wine-selector">
+                </select>
+        </section>
+
+        <section class="analytics-grid">
+            
+            <div class="stat-card">
+                <h3>Current Valuation</h3>
+                <p id="stat-price">$0.00</p>
+            </div>
+            <div class="stat-card">
+                <h3>Rarity Rating</h3>
+                <p id="stat-rarity">-- / 100</p>
+            </div>
+            <div class="stat-card">
+                <h3>Asset Class</h3>
+                <p id="stat-category">Loading...</p>
+            </div>
+
+            <div class="graph-frame">
+                <h3>Appreciation Velocity (5-Year Historical Performance)</h3>
+                <div class="svg-container">
+                    <svg id="analytics-chart" viewBox="0 0 500 200" style="width: 100%; height: 100%;">
+                        </svg>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="js/db.js"></script>
+    <script src="js/analytics-engine.js"></script>
+</body>
+</html>
