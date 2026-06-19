@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintology | Provenance Ledger</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="ledger-body">
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">VINTOLOGY</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Vault Home</a></li>
+                <li><a href="shop.html">The Marketplace</a></li>
+                <li><a href="analytics.html">Asset Analytics</a></li>
+                <li><a href="concierge.html">Private Concierge</a></li>
+                <li><a href="ledger.html" class="active">Provenance Ledger</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="ledger-container">
+        
+        <section class="ledger-header">
+            <h1>The Sovereign Provenance Ledger</h1>
+            <p>Review the unalterable, cryptographically simulated chain of custody and verification data for your digital wine deeds.</p>
+        </section>
+
+        <section class="control-panel">
+            <label for="ledger-selector">Select Active Contract Deed:</label>
+            <select id="ledger-selector">
+                </select>
+        </section>
+
+        <section class="timeline-frame">
+            <div class="asset-meta-header">
+                <h2 id="ledger-asset-name">Asset Name</h2>
+                <div id="ledger-asset-id" class="badge">BLOCKCHAIN DEED ID: --</div>
+            </div>
+
+            <div class="timeline-stream" id="timeline-stream">
+                </div>
+        </section>
+
+    </main>
+
+    <script src="js/db.js"></script>
+    <script src="js/ledger-blockchain.js"></script>

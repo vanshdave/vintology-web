@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintology | Private Concierge</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="concierge-body">
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">VINTOLOGY</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Vault Home</a></li>
+                <li><a href="shop.html">The Marketplace</a></li>
+                <li><a href="analytics.html">Asset Analytics</a></li>
+                <li><a href="concierge.html" class="active">Private Concierge</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="concierge-container">
+        
+        <section class="concierge-header">
+            <h1>The Sommelier Concierge Router</h1>
+            <p>Answer our signature preference profiling matrix to discover allocations curated for your collection goals.</p>
+        </section>
+
+        <section class="quiz-card" id="quiz-card">
+            
+            <div class="quiz-step" id="step-1">
+                <h2>01. Select Your Asset Allocation Category</h2>
+                <p>What specific classification of rare vintage aligns with your portfolio design?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" data-key="category" data-value="Bordeaux Red">Bordeaux Red (Investment Pillar)</button>
+                    <button class="quiz-btn" data-key="category" data-value="Champagne">Champagne (High Liquidity)</button>
+                    <button class="quiz-btn" data-key="category" data-value="Tuscan Merlot">Tuscan Merlot (High Growth)</button>
+                </div>
+            </div>
+
+            <div class="quiz-step hidden" id="step-2">
+                <h2>02. Define Your Liquidity Allocation Floor</h2>
+                <p>Select the baseline valuation profile for this single-bottle deed.</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" data-key="budget" data-value="elite">Premium Allocation (< $2,000)</button>
+                    <button class="quiz-btn" data-key="budget" data-value="sovereign">Sovereign Asset (> $2,000)</button>
+                </div>
+            </div>
+
+            <div class="quiz-step hidden" id="concierge-result">
+                <h2>Your Bespoke Asset Allocation</h2>
+                <p>Our algorithms have cross-referenced the active vault matrix. We recommend the following holding:</p>
+                
+                <div class="recommendation-display">
+                    <h3 id="rec-title">Asset Title</h3>
+                    <div class="rec-meta">
+                        <span id="rec-cat">Category</span> | <span id="rec-price">$0.00</span>
+                    </div>
+                    <p id="rec-rarity">Rarity Rating: --</p>
+                </div>
+
+                <button class="restart-btn" id="restart-quiz">Re-run Profiling Router</button>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="js/db.js"></script>
+    <script src="js/concierge-router.js"></script>
+</body>
+</html>
